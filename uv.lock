@@ -298,6 +298,20 @@ wheels = [
 ]
 
 [[package]]
+name = "colourmap"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/31/c2/6f4c3f88730078b7deca4201809cc166ee841095891e93a64e66d65c0cfe/colourmap-1.2.0.tar.gz", hash = "sha256:29eda4457859d30cf5da024566cb05ba278f3905bd25167b1d725b57abe2e9ce", size = 12187, upload-time = "2025-06-21T20:38:29.799Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0f/e2/27ae7a7e000fd5fd0628f519803c4d773fe8681c9da330110063a9b467a8/colourmap-1.2.0-py3-none-any.whl", hash = "sha256:320ca636f4108b55cff8d0343f732c5cb991c310d7ceb394830d00799767b6bb", size = 11092, upload-time = "2025-06-21T20:38:28.556Z" },
+]
+
+[[package]]
 name = "comm"
 version = "0.2.3"
 source = { registry = "https://pypi.org/simple" }
@@ -434,6 +448,26 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69", size = 75520, upload-time = "2021-03-08T10:59:26.269Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61", size = 25604, upload-time = "2021-03-08T10:59:24.45Z" },
+]
+
+[[package]]
+name = "distfit"
+version = "1.8.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colourmap" },
+    { name = "joblib" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "pypickle" },
+    { name = "scipy" },
+    { name = "statsmodels" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0a/1f/e208a7ec880cdff203cf31db09802e62528ea9a862176162e6b1114a957a/distfit-1.8.8.tar.gz", hash = "sha256:445fd92f1aa4e8c7e381120729ec6c01c12f07222c642159984c948b89184f4c", size = 43232, upload-time = "2025-06-21T20:35:10.024Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7f/9b/c0dcd54cffd2e567d3e21fab478798bb3dc13284439860587f986998ee16/distfit-1.8.8-py3-none-any.whl", hash = "sha256:e63f49617dc337d1f1a66e4b60f79f5e6bfc71c7eb06e4ce196345c8e2948d19", size = 41566, upload-time = "2025-06-21T20:35:08.569Z" },
 ]
 
 [[package]]
@@ -1575,6 +1609,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pypickle"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/65/f2/214b962b5edf37ce86929e073ab4db953e4c495bcb58da511b4e49923159/pypickle-2.0.1.tar.gz", hash = "sha256:0cc1ee65293e4dfa90f0db6435e8021c6a83346be98d0fee81aceb2dad1fb091", size = 16901, upload-time = "2025-05-19T20:45:42.582Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/54/44/7fa273d9bb6f4b67db104eb90c4ca66eb40cb692c5028c836f500d06364e/pypickle-2.0.1-py3-none-any.whl", hash = "sha256:894afd81d26443e8589d21361a3cc04bd9f5c1535aaa627c3bee1212b58bdf74", size = 13615, upload-time = "2025-05-19T20:45:41.138Z" },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -2077,9 +2120,11 @@ name = "stat-report4"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "distfit" },
     { name = "jupyterlab" },
     { name = "matplotlib" },
     { name = "numpy" },
+    { name = "pandas" },
     { name = "plotly" },
     { name = "polars" },
     { name = "quarto" },
@@ -2090,9 +2135,11 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "distfit", specifier = ">=1.8.8" },
     { name = "jupyterlab", specifier = ">=4.4.7" },
     { name = "matplotlib", specifier = ">=3.10.6" },
     { name = "numpy", specifier = ">=2.3.2" },
+    { name = "pandas", specifier = ">=2.3.2" },
     { name = "plotly", specifier = ">=6.3.0" },
     { name = "polars", specifier = ">=1.33.0" },
     { name = "quarto", specifier = ">=0.1.0" },
